@@ -1,0 +1,164 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #a3b18a;
+}
+
+/* Header */
+header{
+    background-color: #588157;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    background-image: url('logoooo.png');
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    background-size: cover;
+    background-position: center;
+    margin:  0 10px 0 10px;
+}
+.brand{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 10px 0 10px;
+}
+
+/* Main */
+
+.main-heading{
+    /* font-size: 3rem; */
+    margin: 1rem;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+}
+
+.container{
+    background-color: #dad7cd;
+    padding: 2rem;
+    border-radius: 2rem;
+    margin: 2rem;
+}
+
+figure{
+    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+figure div{
+    border-radius: 50%;
+    border: .2rem solid #fff;
+    background-size: cover;
+    height: 400px;
+    width: 400px;
+    box-shadow: 0 0 10px 5px #588157;
+}
+
+figure #cat{
+    background-image: url('Untitled.jpg');
+}
+figure #dog{
+    background-image: url('Untitled-1.jpg');
+}
+figure #rabbit{
+    background-image: url("rabbit.jpg");
+}
+
+article{
+    margin-bottom: 5rem;
+}
+
+article h2{
+    font-size: 3rem;
+    color: #588157;
+    text-shadow: 0 0 2px #588157;
+}
+
+.para, .owner-review, .incident-list{
+    margin: 1rem;
+    line-height: 1.5;
+}
+
+.para{
+    text-indent: 3rem;
+}
+.incident-list ul{
+    margin-left: 3rem;
+}
+
+.owner-review{
+    background-color: #588157;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 2rem;
+}
+.owner-review blockquote{
+    margin-left: 1rem;
+    letter-spacing: .1rem;
+}
+
+
+/* Profile Card*/
+
+.profile-card{
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: #dad7cd;
+    margin: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.profile-card .pfp{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 10px 5px #588157;
+    background-image: url("meeee.jpg");
+}
+.profile-card .details{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.profile-card .details .name{
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: 0 0 2px #588157;
+}
+
+.profile-card .details .follow{
+    display: flex;
+    gap: 1rem;
+}
+
+
+hr{
+    margin-bottom: 5rem;
+    border: .1rem dashed #588157;
+    width: 60%;
+    margin-left: 20%;
+}
+/*footer*/
+footer{
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    padding: 20px;
+    background-color: #588157;
+    color: #fff;
+    text-align: center;
+}
