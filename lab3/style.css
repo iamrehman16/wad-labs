@@ -3,16 +3,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --primary-color: #588157;
+    --secondary-color: #dad7cd;
+    --tertiary-color: #a3b18a;
+    --dark-color: #000;
+    --light-color: #fff;
+}
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: #a3b18a;
+    background-color: var(--tertiary-color);
 }
 
 /* Header */
 header{
-    background-color: #588157;
+    background-color: var(--primary-color);
     color: #fff;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-section{
     display: flex;
     align-items: center;
 }
@@ -31,25 +43,58 @@ header{
     margin: 0 10px 0 10px;
 }
 
+/* Nav */
+nav ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0 2rem;
+
+}
+
+nav ul li{
+    padding: .8rem;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: #588157;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+nav ul li:hover{
+    transform: translate(0, -5px);
+}
+nav ul li:active{
+    transform: translate(0, 0);
+}
+
+
+/* Body section */
+.body-section{
+    padding: 2rem;
+}
+
 /* Main */
 
 .main-heading{
-    /* font-size: 3rem; */
+    font-size: 3rem;
     margin: 1rem;
     color: #fff;
     text-shadow: 0 0 10px #000;
 }
 
 .container{
-    background-color: #dad7cd;
+    background-color: var(--secondary-color);
     padding: 2rem;
     border-radius: 2rem;
     margin: 2rem;
 }
 
 figure{
-    margin-bottom: 1rem;
-    margin-bottom: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,9 +103,9 @@ figure div{
     border-radius: 50%;
     border: .2rem solid #fff;
     background-size: cover;
-    height: 400px;
-    width: 400px;
-    box-shadow: 0 0 10px 5px #588157;
+    height: 250px;
+    width: 250px;
+    box-shadow: 0 0 10px 5px var(--primary-color);
 }
 
 figure #cat{
@@ -72,14 +117,33 @@ figure #dog{
 figure #rabbit{
     background-image: url("rabbit.jpg");
 }
-
+#cat:hover, #dog:hover, #rabbit:hover{
+    transform: scale(1.05);
+    transition: ease-in-out .3s;
+}
 article{
     margin-bottom: 5rem;
 }
 
 article h2{
     font-size: 3rem;
-    color: #588157;
+    color: var(--primary-color);
+    text-shadow: 0 0 2px #588157;
+}
+
+.about{
+    display: flex;
+    gap: 2rem;
+    margin: 2rem;
+}
+.para{
+    text-indent: 3rem;
+}
+
+.incident-list h3, .owner-review h3{
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin: 1rem;
     text-shadow: 0 0 2px #588157;
 }
 
@@ -87,24 +151,23 @@ article h2{
     margin: 1rem;
     line-height: 1.5;
 }
-
-.para{
-    text-indent: 3rem;
-}
 .incident-list ul{
     margin-left: 3rem;
+    list-style:circle;
 }
 
-.owner-review{
-    background-color: #588157;
+blockquote{
+    background-color: var(--primary-color);
     color: #fff;
     padding: 1rem;
     border-radius: 1rem;
     margin: 2rem;
-}
-.owner-review blockquote{
+    text-indent: 2rem;
     margin-left: 1rem;
     letter-spacing: .1rem;
+}
+.owner-review h3{
+    margin-top: 1rem;
 }
 
 
@@ -113,7 +176,7 @@ article h2{
 .profile-card{
     padding: 2rem;
     border-radius: 2rem;
-    background-color: #dad7cd;
+    background-color: var(--secondary-color);
     margin: 2rem;
     display: flex;
     gap: 2rem;
@@ -127,6 +190,11 @@ article h2{
     background-position: center;
     box-shadow: 0 0 10px 5px #588157;
     background-image: url("meeee.jpg");
+    transition: ease-in-out .3s;
+}
+.pfp:hover{
+    transform: scale(1.05);
+    transition: ease-in-out .3s;
 }
 .profile-card .details{
     display: flex;
@@ -134,7 +202,7 @@ article h2{
     gap: 1rem;
 }
 .profile-card .details .name{
-    font-family: monospace;
+    /* font-family: monospace; */
     font-weight: bold;
     font-size: 2rem;
     text-shadow: 0 0 2px #588157;
@@ -145,10 +213,14 @@ article h2{
     gap: 1rem;
 }
 
+.name, .follower, .following, .bio, time{
+    color: var(--primary-color);
+    cursor: pointer;
+}
 
 hr{
     margin-bottom: 5rem;
-    border: .1rem dashed #588157;
+    border: .1rem solid #588157;
     width: 60%;
     margin-left: 20%;
 }
@@ -158,7 +230,7 @@ footer{
     width: 100%;
     bottom: 0;
     padding: 20px;
-    background-color: #588157;
+    background-color: var(--primary-color);
     color: #fff;
     text-align: center;
 }
