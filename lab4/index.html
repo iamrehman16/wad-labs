@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Records</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--header-->
+    <header>
+      <div class="logo-section">
+        <div class="logo"></div>
+        <div class="brand">InfiniteRecords.</div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="box">
+        <form action="#" method="post">
+          <div class="title">
+            <h1>Student Record</h1>
+          </div>
+
+          <div class="regNo">
+            <label for="regNo">RegNo:</label>
+            <input
+              type="text"
+              name="regNo"
+              id="regNo"
+              placeholder="i.e. 04072213016"
+              required
+            />
+          </div>
+
+          <div class="name">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="i.e John Doe"
+              required
+            />
+          </div>
+
+          <div class="email">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="i.e. abc@mail.com"
+              required
+            />
+          </div>
+
+          <div class="dob">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" name="dob" id="dob" required />
+          </div>
+
+          <div class="gender">
+            <label for="m"
+              ><input type="radio" name="gender" id="m" required />Male</label
+            >
+            <label for="f"
+              ><input type="radio" name="gender" id="f" />Female</label
+            >
+            <label for="o"
+              ><input type="radio" name="gender" id="o" />Others</label
+            >
+          </div>
+
+          <div class="submit">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </section>
+
+
+      <section class="records">
+        <div class="table-title">
+            <caption>
+                Record Table
+              </caption>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>RegNo</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>DOB</th>
+              <th>Gender</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>04072213016</td>
+              <td>Abdur Rahman</td>
+              <td>ansarian581@gmail.com</td>
+              <td>06/09/2003</td>
+              <td>Male</td>
+            </tr>
+            <tr>
+              <td>04072213016</td>
+              <td>Abdur Rahman</td>
+              <td>ansarian581@gmail.com</td>
+              <td>06/09/2003</td>
+              <td>Male</td>
+            </tr>
+            <tr>
+              <td>04072213016</td>
+              <td>Abdur Rahman</td>
+              <td>ansarian581@gmail.com</td>
+              <td>06/09/2003</td>
+              <td>Male</td>
+            </tr>
+            <tr>
+                <td>04072213016</td>
+                <td>Abdur Rahman</td>
+                <td>ansarian581@gmail.com</td>
+                <td>06/09/2003</td>
+                <td>Male</td>
+           </tr>
+           <tr>
+            <td>04072213016</td>
+            <td>Abdur Rahman</td>
+            <td>ansarian581@gmail.com</td>
+            <td>06/09/2003</td>
+            <td>Male</td>
+       </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <section class="how">
+        <small>
+            <p>
+                I have used HTML, CSS to create this simple student record system. I used semantic tags like <em>header, footer, section, main, input, submit. This page has 2 big elements, one is a form and other is table. Hope you like it </em>
+            </p>
+        </small>
+    </section>
+
+
+    <footer>
+      <small> Abdur Rahman &copy; 2025 </small>
+    </footer>
+  </body>
+</html>

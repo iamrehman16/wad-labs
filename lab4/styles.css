@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: QuickSand, sans-serif;
+}
+
+:root{
+    --primary-color: #023047;
+    --primary-hover-color: #02283b;
+    --defualt-hover:#005f8f;
+    --secondary-color: #17bcf3;
+    --tertiary-color: #71cae7;
+    --dark-color: #000;
+    --light-color: #fff;
+    --zebra-color:lightgrey;
+}
+
+/* Header */
+header{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-section{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    background-image: url('logoooo.png');
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    background-size: cover;
+    background-position: center;
+    margin:  0 10px 0 10px;
+}
+.brand{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 10px 0 10px;
+}
+
+/* Nav */
+nav ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0 2rem;
+
+}
+
+nav ul li{
+    padding: .8rem;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+nav ul li:hover{
+    transform: translate(0, -5px);
+}
+nav ul li:active{
+    transform: translate(0, 0);
+}
+
+/*body*/
+body{
+    background-color: var(--tertiary-color);
+}
+
+/*Main*/
+.box{
+    width: 400px;
+    height: 500px;
+    min-width: 400px;
+    background-color: var(--light-color);
+    margin: 50px auto;
+    border-radius: 10px;
+    /* border: 2px solid var(--primary-color); */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title{
+    text-align: center;
+}
+.title h1{
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 1rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+.regNo, .name, .email{
+    display: flex;
+    flex-direction: row;
+    gap: .2rem;
+    align-items: center;
+}
+form label{
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 700;
+}
+form input{
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border: 2px solid var(--secondary-color);
+    outline: none;
+    border-radius: 5px;
+    flex-grow: 1;
+    background-color: var(--tertiary-color);
+    box-shadow: #023047 0 0 5px;
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 400;
+}
+.submit{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+input[type="submit"]{
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+    width: 80%;
+    border: none;
+    padding: 1rem 0;
+    box-shadow: 0 0 5px var(--dark-color)
+}
+input[type="submit"]:hover{
+    background-color: var(--primary-hover-color);
+}
+input[type="submit"]:active{
+    transform: scale(.9);
+}
+
+/*table*/
+.records{
+    width: fit-content;
+    margin: 50px auto;
+}
+.table-title{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-align: center;
+    border: none;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+    border-radius: .8rem;
+    margin-bottom: 1rem;
+}
+table{
+    background-color: var(--light-color);
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+thead{
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 1rem;
+}
+th,tr,td{
+    padding: 1.5rem;
+    text-align: center;
+}
+td{
+    border-bottom: 1px solid var(--primary-color);
+}
+tbody tr:last-of-type{
+    border-bottom: var(--primary-color) 4px solid;
+}
+tr:nth-of-type(even){
+    background-color: var(--zebra-color);
+}
+
+/*how i did*/
+.how{
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+
+
+/*footer*/
+footer{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
