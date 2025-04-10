@@ -1,0 +1,347 @@
+/* Reset default margins, padding, and set box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and borders are included in element's total width/height */
+}
+
+/* Define global CSS variables for colors */
+:root {
+    --primary-color: #0d1b2a; /* Dark blue for header and footer */
+    --secondary-color: #1b263b; /* Slightly lighter blue for nav and article backgrounds */
+    --tertiary-color: #415a77; /* Medium blue for main background and cards */
+    --quarternary-color: #778da9; /* Light blue for aside background */
+    --dark-color: #000; /* Black (not used yet) */
+    --light-color: #fff; /* White for text and backgrounds */
+}
+
+/* Set default font for the entire page */
+body {
+    font-family: Quicksand, sans-serif; /* Custom font for a clean, modern look */
+}
+
+/* Grid container for the overall layout */
+.grid-container {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-areas: 
+        "header header" /* Header spans both columns */
+        "nav nav" /* Navigation spans both columns */
+        "main aside" /* Main content and sidebar side by side */
+        "footer footer"; /* Footer spans both columns */
+    grid-template-rows: auto auto 1fr auto; /* Rows: header, nav, main+aside (flexible), footer */
+    grid-template-columns: 3fr 1fr; /* Columns: main takes 3 parts, aside takes 1 part */
+    min-height: 100vh; /* Ensure the grid takes the full viewport height */
+}
+
+/* Header styling */
+header {
+    position: sticky; /* Sticks the header to the top when scrolling */
+    top: 0; /* Aligns it to the top of the viewport */
+    grid-area: header; /* Assign to the 'header' grid area */
+    background-color: var(--primary-color); /* Dark blue background */
+    color: var(--light-color); /* White text */
+    padding: 10px; /* Inner spacing */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Vertically center items */
+    justify-content: space-around; /* Space items evenly */
+}
+
+/* Social icons container in the header */
+.socials {
+    display: flex; /* Flexbox for horizontal layout */
+    align-items: center; /* Vertically center icons */
+    justify-content: center; /* Horizontally center icons */
+}
+
+/* Individual social icon styling */
+.social-icon img {
+    border-radius: 50%; /* Circular shape */
+    height: 2rem; /* Fixed height */
+    width: 2rem; /* Fixed width */
+    background-size: cover; /* Ensure image fits */
+    background-position: center; /* Center the image */
+    margin: 0 10px; /* Space between icons */
+    cursor: pointer; /* Hand cursor on hover */
+}
+
+/* Logo section in the header */
+.logo-section {
+    display: flex; /* Flexbox for horizontal layout */
+    align-items: center; /* Vertically center logo and brand */
+}
+
+/* Logo styling */
+.logo {
+    background-image: url('logoooo.png'); /* Logo image */
+    border-radius: 50%; /* Circular shape */
+    height: 4rem; /* Fixed height */
+    width: 4rem; /* Fixed width */
+    background-size: cover; /* Ensure image fits */
+    background-position: center; /* Center the image */
+    margin: 0 .8rem; /* Space around the logo */
+}
+
+/* Brand name styling */
+.brand {
+    font-size: 2rem; /* Large font size */
+    font-weight: 700; /* Bold text */
+    margin: 0 .8rem; /* Space around the brand name */
+}
+
+/* Search bar container in the header */
+.searchbar {
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Vertically center input and button */
+    justify-content: center; /* Horizontally center */
+    margin: 0 .8rem; /* Space around the search bar */
+    padding: .8rem; /* Inner spacing */
+}
+
+/* Search input styling */
+.searchbar input {
+    width: 12rem; /* Fixed width */
+    height: 2rem; /* Fixed height */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* No border */
+    padding: .5rem; /* Inner spacing */
+    font-size: 1rem; /* Font size */
+    margin-right: .8rem; /* Space between input and button */
+    background-color: var(--light-color); /* White background */
+    outline: none; /* Remove default outline */
+    padding-left: 1rem; /* Left padding for text */
+}
+
+/* Search button styling */
+.searchbar button {
+    background-color: var(--light-color); /* White background */
+    color: var(--primary-color); /* Dark blue text */
+    border: none; /* No border */
+    border-radius: .5rem; /* Rounded corners */
+    padding: .5rem .8rem; /* Inner spacing */
+    cursor: pointer; /* Hand cursor on hover */
+    font-size: 1rem; /* Font size */
+    font-weight: 600; /* Semi-bold text */
+}
+
+/* Navigation bar styling */
+nav {
+    grid-area: nav; /* Assign to the 'nav' grid area */
+    background-color: var(--secondary-color); /* Slightly lighter blue background */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+}
+
+/* Navigation list styling */
+nav ul {
+    width: 50%; /* Take up 50% of the nav width */
+    list-style-type: none; /* Remove bullet points */
+    padding: 1rem; /* Inner spacing */
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: space-around; /* Space links evenly */
+}
+
+/* Navigation list item styling */
+nav ul li {
+    margin: 0 .8rem; /* Space between list items */
+}
+
+/* Navigation link styling */
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: var(--light-color); /* White text */
+    font-weight: bold; /* Bold text */
+    padding: .8rem 1.2rem; /* Inner spacing */
+    border-radius: .5rem; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+}
+
+/* Navigation link hover effect */
+nav ul li a:hover {
+    background-color: var(--primary-color); /* Dark blue background on hover */
+    color: var(--light-color); /* White text */
+}
+
+/* Main content styling */
+main {
+    grid-area: main; /* Assign to the 'main' grid area */
+    background-color: var(--tertiary-color); /* Medium blue background */
+    padding: 2rem; /* Inner spacing */
+}
+
+/* Blog title styling */
+.blog {
+    font-size: 2rem; /* Large font size */
+    color: var(--light-color); /* White text */
+}
+
+/* Article (blog post) styling */
+article {
+    background-color: var(--secondary-color); /* Slightly lighter blue background */
+    color: var(--light-color); /* White text */
+    padding: 2rem; /* Inner spacing */
+    border-radius: 1rem; /* Rounded corners */
+    margin: .8rem 0; /* Vertical spacing between articles */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    gap: .8rem; /* Space between elements inside article */
+}
+
+/* Sidebar (aside) styling */
+aside {
+    grid-area: aside; /* Assign to the 'aside' grid area */
+    background-color: var(--quarternary-color); /* Light blue background */
+    padding: 2rem; /* Inner spacing */
+    color: var(--light-color); /* White text */
+}
+
+/* Sidebar list styling */
+aside ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+/* Sidebar list item styling */
+aside ul li {
+    margin-left: .8rem; /* Indent list items */
+    margin-top: .5rem; /* Space between list items */
+}
+
+/* Sidebar link styling */
+aside ul li a {
+    text-decoration: none; /* Remove underline */
+    color: var(--light-color); /* White text */
+    font-weight: bold; /* Bold text */
+    padding: .8rem 2rem; /* Inner spacing */
+    border-radius: .5rem; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+}
+
+.box{
+    width: 100%; /* Full width of the sidebar */
+    margin: .8rem 0; /* Vertical spacing between boxes */
+}
+
+/* Sidebar heading styling */
+.box h2 {
+    font-size: 1.5rem; /* Larger font size */
+    margin-bottom: .8rem; /* Space below heading */
+    color: var(--light-color); /* White text */
+    background-color: var(--secondary-color); /* Slightly lighter blue background */
+    border-radius: .5rem; /* Rounded corners */
+    padding: .8rem; /* Inner spacing */
+}
+/* Profile card styling (inside card) */
+.profile-card {
+    background-color: var(--tertiary-color); /* Slightly lighter blue background */
+    padding: 1rem; /* Inner spacing */
+    display: grid;
+    grid-template-areas:
+        "img details"
+        "bio bio";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+    color: var(--light-color);
+    border-radius: 1rem;
+    grid-gap: .8rem;
+}
+
+.img {
+    grid-area: img;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.details {
+    grid-area: details;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+}
+
+.bio {
+    grid-area: bio;
+    padding: .8rem;
+}
+
+.img img {
+    border-radius: 50%;
+    height: 6rem;
+    width: 6rem;
+    object-fit: cover;
+}
+
+/* Footer styling */
+footer {
+    grid-area: footer; /* Assign to the 'footer' grid area */
+    background-color: var(--primary-color); /* Dark blue background */
+    padding: 1rem; /* Inner spacing */
+    text-align: center; /* Center the text */
+    color: var(--light-color); /* White text */
+    position: sticky; /* Sticks the footer to the bottom when scrolling */
+    bottom: 0; /* Aligns it to the bottom of the viewport */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1235px) {
+    .profile-card {
+        grid-template-areas:
+            "img"
+            "details"
+            "bio";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+}
+@media (max-width: 1040px) {
+    .grid-container {
+        grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer"; /* Stack all sections vertically */
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+    nav ul {
+        width: 100%; /* Full width for smaller screens */
+    }
+    nav ul li {
+        margin: 0; /* Remove margin for smaller screens */
+    }
+    nav ul li a {
+        padding: .8rem; /* Adjust padding for smaller screens */
+    }
+
+    .profile-card {
+        grid-template-areas:
+            "img details bio";
+        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-rows: auto;
+    }
+}
+
+/* Responsive design tablet ipad */
+@media (max-width: 820px) {
+    header {
+        flex-direction: column; /* Stack header items vertically */
+        gap:.5rem; /* Space between items */
+     }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 640px) {
+   .profile-card{
+    grid-template-areas:
+    "img details"
+    "bio bio";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+   }
+}
+
+
