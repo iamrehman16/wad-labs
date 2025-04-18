@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Explore</title>
+</head>
+<body class="min-h-screen bg-indigo-900 pb-64">
+
+    <h1 class="text-center font-bold text-3xl mt-3 text-white">Using Flex</h1>
+
+    <div class="flex flex-col md:flex-row md:max-w-md items-center max-w-sm  bg-indigo-400 text-white p-4 gap-5 mx-auto mt-10 rounded-lg shadow-lg">
+        <div class="w-32 h-32 flex items-center justify-center bg-orange-500 ">Box1</div>
+        <div class="w-32 h-32 flex items-center justify-center bg-orange-500">Box2</div>
+        <div class="w-32 h-32 flex items-center justify-center bg-orange-500">Box3</div>
+    </div>
+
+    <hr class="my-10 border-t border-gray-300 max-w-3/4 mx-auto">
+
+    <h1 class="text-center font-bold text-3xl mt-3 mb-3 text-white">Using Grid and It's Responsive - Tweak Width to play</h1>
+    <div class="grid grid-cols-3 gap-2 max-w-sm mx-auto bg-indigo-400 text-white p-4 rounded-lg shadow-lg md:grid-cols-6 md:max-w-3xl">
+        <div class="flex items-center justify-center bg-orange-500 p-4">Box1</div>
+        <div class="flex items-center justify-center bg-orange-500 p-4">Box2</div>
+        <div class="flex items-center justify-center bg-orange-500 p-4">Box3</div>
+        <div class="flex items-center justify-center bg-orange-500 p-4">Box4</div>
+        <div class="flex items-center justify-center bg-orange-500 p-4">Box5</div>
+        <div class="flex items-center justify-center bg-orange-500 p-4">Box6</div>
+    </div>
+
+
+    <hr class="my-10 border-t border-gray-300 max-w-3/4 mx-auto">
+
+    <h1 class="text-center font-bold text-3xl mt-3 mb-3 text-white">Using margin, padding and text styles</h1>
+
+
+    <div class="max-w-sm mx-auto bg-indigo-400 text-white p-4 rounded-lg shadow-lg md:max-w-md">
+        <h1 class="font-bold text-orange-500">Hello World</h1>
+        <p class="text-gray-200 font-normal">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.
+        </p>
+    </div>
+
+
+    <hr class="my-10 border-t border-gray-300 max-w-3/4 mx-auto">
+
+    <!--Table-->
+
+    <h1 class="text-center font-bold text-3xl mt-3 mb-3 text-white">Use of tables and borders- It's responsive</h1>
+
+
+    <div class="overflow-x-auto max-w-sm mx-auto bg-indigo-400 text-white p-4 rounded-lg shadow-lg md:max-w-3xl">
+        <table class="min-w-full bg-indigo-400 text-white border-separate">
+            <thead>
+                <tr class="bg-orange-500 text-white">
+                    <th class="py-2 px-4">Header 1</th>
+                    <th class="py-2 px-4">Header 2</th>
+                    <th class="py-2 px-4">Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-gray-200 text-gray-800">
+                    <td class="py-2 px-4">Row 1 Col 1</td>
+                    <td class="py-2 px-4">Row 1 Col 2</td>
+                    <td class="py-2 px-4">Row 1 Col 3</td>
+                </tr>
+                <tr class="bg-gray-300 text-gray-800">
+                    <td class="py-2 px-4">Row 2 Col 1</td>
+                    <td class="py-2 px-4">Row 2 Col 2</td>
+                    <td class="py-2 px-4">Row 2 Col 3</td>
+                </tr>
+                <tr class="bg-gray-200 text-gray-800">
+                    <td class="py-2 px-4">Row 3 Col 1</td>
+                    <td class="py-2 px-4">Row 3 Col 2</td>
+                    <td class="py-2 px-4">Row 3 Col 3</td>
+                </tr>
+                <tr class="bg-gray-300 text-gray-800">
+                    <td class="py-2 px-4">Row 4 Col 1</td>
+                    <td class="py-2 px-4">Row 4 Col 2</td>
+                    <td class="py-2 px-4">Row 4 Col 3</td>
+                </tr>
+            
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+    <hr class="my-10 border-t border-gray-300 max-w-3/4 mx-auto">
+
+    <h1 class="text-center font-bold text-3xl mt-3 mb-3 text-white">Using buttons with hovers</h1>
+
+
+    <button class="py-2 px-4 border-none rounded-sm text-white bg-orange-500 mx-auto block hover:scale-110 ease-linear transition-all cursor-pointer">Hover Me</button>
+
+
+
+    <hr class="my-10 border-t border-gray-300 max-w-3/4 mx-auto">
+
+    <h1 class="text-center font-bold text-3xl mt-3 mb-3 text-white">Custom card with arbitrary value in</h1>
+
+
+    <div class="w-[400px] bg-[maroon] text-[#000] p-6 border-[white] rounded-[5px] text-center mx-auto mt-10 shadow-lg">
+        <p class="text-[white] text-[32px]">This is custom value text</p>
+        <p class="text-[orange] text[11px]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores modi veniam vel!</p>
+    </div>
+
+
+
+    <hr class="my-10 border-t border-gray-300 max-w-3/4 mx-auto">
+
+    
+    <h1 class="text-center font-bold text-3xl mt-3 mb-3 text-white">Card with hover effects and baclground</h1>
+
+
+    <div class="bg-[url('galaxy.avif')] bg-cover bg-center md:max-w-lg max-w-sm md:h-44 h-auto mx-auto bg-indigo-400 text-white p-4 rounded-lg shadow-lg  transition duration-300 ease-in-out flex felx-col items-center justify-center md:flex-row gap-4">
+        <div class="flex flex-col gap-2">
+            <h1 class="font-bold text-orange-500">Hello World</h1>
+        <p class="text-gray-200 font-normal">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, illo.
+        </p>
+        <button class="mt-4 bg-orange-500 text-white py-2 px-6 rounded-lg hover:bg-white hover:text-black transition duration-300 ease-in-out">Click Me</button>
+        </div>
+        </div>
+
+
+        <hr class="my-10 border-t border-gray-300 max-w-3/4 mx-auto">
+
+
+        <h1 class="text-center font-bold text-3xl mt-3 mb-3 text-white">Perfectly centered card which changes gray shade on hover</h1>
+
+        <div class="relative p-6 bg-gray-300 rounded-lg md:max-w-md max-w-sm h-[300px] mx-auto shadow-lg hover:bg-gray-500 transition duration-300 ease-in-out flex items-center justify-center">
+            <div class="p-4 bg-indigo-300 rounded-xl">
+                Perfectly centered card
+            </div>
+         </div>
+        
+
+        
+       
+    
+</body>
+</html>

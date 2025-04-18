@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Webpage -TailwindCSS</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+
+
+
+
+<body class="min-h-screen font-['Quicksand']">
+    <div class="grid md:grid-cols-[3fr_1fr] md:grid-rows-[auto_auto_1fr_auto] w-full grid-cols-1 grid-rows-[auto_auto_1fr_auto_auto]">
+        <!--header-->
+     <header class="col-span-2  bg-[#0d1b2a] text-[#fff] flex md:flex-row justify-between items-center py-4 px-14 sticky top-0 flex-col gap-4">
+        <div class="flex flex-row gap-2 items-center" >
+            <div ><img src="fb.png" alt="facebook" class="w-8 h-8 rounded-full cursor-pointer"></div>
+            <div ><img src="insta.jpg" alt="twitter" class="w-8 h-8 rounded-full cursor-pointer"></div>
+            <div ><img src="twitter.png" alt="instagram" class="w-8 h-8 rounded-full cursor-pointer"></div>
+        </div>
+        <div class="flex flex-row gap-2 justify-around items-center text-2xl font-bold">
+            <div class="bg-[url('logo.png')] bg-cover bg-center w-16 h-16 rounded-full"></div>
+            <div >
+                InfiniteBlogs.
+              </div>
+        </div>
+        <div class="flex flex-row gap-2 items-center justify-around h-10 text-black">
+            <input type="text" placeholder="Search..." class="outline-none border-none bg-white  w-[70%] rounded-md h-full pl-2">
+            <button type="submit" class="bg-white rounded-md h-full px-4">Search</button>
+        </div>
+     </header>
+
+
+     <!--nav goes here-->
+     <nav class="col-span-2 bg-[#1b2631] text-[#fff] py-4">
+        <ul class="flex md:flex-row flex-col justify-center md:gap-20 gap-2 items-center h-full">
+            <li><a href="#" class="cursor-pointer hover:font-bold">Home</a></li>
+            <li><a href="#" class="cursor-pointer hover:font-bold">About</a></li>
+            <li><a href="#" class="cursor-pointer hover:font-bold">Services</a></li>
+            <li><a href="#" class="cursor-pointer hover:font-bold">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!--main goes here-->
+    <main class="md:col-span-1 col-span-2 flex flex-col gap-4 p-4 bg-[#415a77] text-white md:col-start-1 md:row-start-3"> 
+        <h1 class="font-bold text-3xl">Today's Blog</h1>
+        <article class="bg-[#1b2631] p-4 rounded-lg flex flex-col gap-2">
+            <h2 class="font-bold text-xl">Optimus Prime</h2>
+            <p>
+                Optimus Prime is a fictional character from the Transformers franchise. He is the leader of the Autobots, a faction of sentient robots that can transform into vehicles and other objects. Optimus Prime is known for his strong sense of justice, leadership skills, and iconic red and blue color scheme. He often battles against the Decepticons, led by Megatron, to protect humanity and maintain peace in the universe.
+            </p>
+        </article>
+        <article class="bg-[#1b2631] p-4 rounded-lg flex flex-col gap-2">
+            <h2 class="font-bold text-xl">Bumble Bee</h2>
+           <p>
+                Bumblebee is a fictional character from the Transformers franchise. He is a small, yellow Autobot who transforms into a compact car. Bumblebee is known for his bravery, loyalty, and ability to communicate through radio signals. He often serves as a scout and messenger for the Autobots, and he has a close bond with human characters in the series.
+            </p>
+           </p>
+        </article>
+        <article class="bg-[#1b2631] p-4 rounded-lg flex flex-col gap-2">
+            <h2 class="font-bold text-xl">Megatron</h2>
+            <p>
+                Megatron is a fictional character from the Transformers franchise. He is the leader of the Decepticons, a faction of sentient robots that can transform into vehicles and other objects. Megatron is known for his ruthless ambition, cunning intelligence, and powerful weaponry. He often battles against the Autobots, led by Optimus Prime, in a quest for power and domination over the universe.
+            </p>
+        </article>
+        <article class="bg-[#1b2631] p-4 rounded-lg flex flex-col gap-2">
+            <h2 class="font-bold text-xl">Optimus Prime</h2>
+            <p>
+                Optimus Prime is a fictional character from the Transformers franchise. He is the leader of the Autobots, a faction of sentient robots that can transform into vehicles and other objects. Optimus Prime is known for his strong sense of justice, leadership skills, and iconic red and blue color scheme. He often battles against the Decepticons, led by Megatron, to protect humanity and maintain peace in the universe.
+            </p>
+        </article>
+        <article class="bg-[#1b2631] p-4 rounded-lg flex flex-col gap-2">
+            <h2 class="font-bold text-xl">Optimus Prime</h2>
+            <p>
+                Optimus Prime is a fictional character from the Transformers franchise. He is the leader of the Autobots, a faction of sentient robots that can transform into vehicles and other objects. Optimus Prime is known for his strong sense of justice, leadership skills, and iconic red and blue color scheme. He often battles against the Decepticons, led by Megatron, to protect humanity and maintain peace in the universe.
+            </p>
+        </article>
+    </main>
+
+
+    <!--aside goes here-->
+    <aside class="md:col-span-1 col-span-2 text-[#fff] p-4 md:col-start-2 md:row-start-3 bg-[#778da9]">
+        <div class="flex flex-col gap-4 my-3">
+            <h2 class="text-2xl bg-[#1b2631] py-1 px-4 rounded-md">Recent Posts</h2>
+            <ul class="pl-4">
+                <li><a href="#">Post 1</a></li>
+                <li><a href="#">Post 2</a></li>
+                <li><a href="#">Post 3</a></li>
+                <li><a href="#">Post 4</a></li>
+                <li><a href="#">Post 5</a></li>
+            </ul>
+        </div>
+       
+        <div class="flex flex-col gap-4 my-3">
+            <h2 class="text-2xl bg-[#1b2631] py-1 px-4 rounded-md">Categories</h2>
+            <ul class="pl-4">
+                <li><a href="#">Category 1</a></li>
+                <li><a href="#">Category 2</a></li>
+                <li><a href="#">Category 3</a></li>
+                <li><a href="#">Category 4</a></li>
+                <li><a href="#">Category 5</a></li>
+            </ul>
+        </div>
+       <div class="flex flex-col gap-4 my-3">
+        <h2 class="text-2xl bg-[#1b2631] py-1 px-4 rounded-md">Archives</h2>  
+        <ul class="pl-4">
+            <li><a href="#">January 2023</a></li>
+            <li><a href="#">February 2023</a></li>
+            <li><a href="#">March 2023</a></li>
+            <li><a href="#">April 2023</a></li>
+            <li><a href="#">May 2023</a></li>
+        </ul>
+       </div>
+       <div class="flex flex-col gap-4 my-3">
+        <h2 class="text-2xl bg-[#1b2631] py-1 px-4 rounded-md">Posted By</h2>
+        
+        <div class="flex flex-col bg-[#415a77] p-4 rounded-lg gap-4">
+            <div class="flex md:flex-col lg:flex-row gap-4 items-center">
+                <div class="img"><img src="meeee.jpg" alt="Me" class="w-20 h-20 rounded-full"></div>
+    
+                <div class="flex flex-col gap-1">
+                    <div class="font-bold">Abdur Rahman</div>
+                    <div class="flex flex-col gap-1 text-sm">
+                        <div class="follower">Followers : 191</div>
+                        <div class="following">Following : 83</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p>Abdur Rahman is a passionate blogger and tech enthusiast. He loves sharing insights on technology, lifestyle, and personal development.</p>
+           </div>
+        </div>
+
+       </div>
+    </aside>
+
+
+    <!--footer goes here-->
+    <footer class="col-span-2  bg-[#0d1b2a] text-[#fff] text-center py-4 px-14 sticky bottom-0">
+        &copy; 2025 Abdur Rahman. All rights reserved.
+    </footer>
+
+    </div>
+</body>
+</html>
